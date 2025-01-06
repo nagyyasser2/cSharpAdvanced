@@ -10,6 +10,13 @@ namespace AdvancedCSharp
     {
         static void Main(string[] args)
         {
+            var name = "nagy";
+
+            Console.WriteLine(name.ToBigCase());
+
+            var num = 5;
+
+            Console.WriteLine(num.IsEven());
         }
     }
 }

@@ -1,0 +1,13 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace AdvancedCSharp
+{
+    public static class StringExtensions
+    {
+        public static string ToBigCase(this string str) { return str.ToUpper(); }
+    }
+}
