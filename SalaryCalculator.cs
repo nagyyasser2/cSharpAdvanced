@@ -18,13 +18,13 @@ namespace AdvancedCSharp
         {
             foreach (var e in employees)
             {
-                if (predicate(e))
-                {
-                    var salary = e.BasicSalary + e.Ponus - e.Deduction;
+                //if (predicate(e))
+                //{
+                //    var salary = e.BasicSalary + e.Ponus - e.Deduction;
 
-                    EmployeeSalaryCalculated?.Invoke(e, salary);
+                //    EmployeeSalaryCalculated?.Invoke(e, salary);
 
-                }
+                //}
             }
         }
     }

@@ -7,28 +7,16 @@ namespace AdvancedCSharp
     {
         static void Main(string[] args)
         {
-            ProcessPatch1();
-            ProcessPatch2();
+          var employee = new Employee();
 
-        }
+            employee.AddPayItem("Basic", 3000);
+            employee.AddPayItem("Housing", 499);
+            employee.AddPayItem("Insurence", -500);
+            employee.AddPayItem("Transportation", 1000);
 
-        private static void ProcessPatch1()
-        {
-            for (int i = 0; i < 1000; i++) 
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine(i);
-                Console.ForegroundColor = ConsoleColor.White;
-            }
-        } 
 
-        private static void ProcessPatch2()
-        {
-            for (int i = 1001; i < 2000; i++)
-            {
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine(i);
-                Console.ForegroundColor = ConsoleColor.White;
+            foreach (var payItem in employee) {
+                Console.WriteLine($"{payItem.Name} = {payItem.Value}");
             }
         }
     }
