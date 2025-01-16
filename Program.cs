@@ -7,33 +7,29 @@ namespace AdvancedCSharp
     {
         static void Main(string[] args)
         {
-            List<Employee> employees = new List<Employee>();
-            Random random = new Random();
+            ProcessPatch1();
+            ProcessPatch2();
 
-            for (int i = 0; i < 100; i++)
-            {
-                Employee employee = new Employee
-                {
-                    Name = i.ToString(),
-                    BasicSalary = random.Next(1000, 5001),
-                    Deduction = random.Next(0, 501),
-                    Ponus = random.Next(0, 1001)
-                };
-                employees.Add(employee);
-            }
-
-            SalaryCalculator salaryCalculator = new SalaryCalculator();
-
-            salaryCalculator.EmployeeSalaryCalculated += LogEmployeeSalary;
-            salaryCalculator.EmployeeSalaryCalculated += (e,s)=> Console.WriteLine($"Payslip sent to employee `{s}`");
-
-            salaryCalculator.CalculateSalaries(employees, e => e.BasicSalary >= 3500);
-  
         }
 
-        private static void LogEmployeeSalary(Employee employee, int salary)
+        private static void ProcessPatch1()
         {
-            Console.WriteLine($"{employee.Name}, has salary: {salary}");
+            for (int i = 0; i < 1000; i++) 
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine(i);
+                Console.ForegroundColor = ConsoleColor.White;
+            }
+        } 
+
+        private static void ProcessPatch2()
+        {
+            for (int i = 1001; i < 2000; i++)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine(i);
+                Console.ForegroundColor = ConsoleColor.White;
+            }
         }
     }
 }
